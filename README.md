@@ -10,7 +10,7 @@ Por ejemplo la pieza 0 2 8 4  sería
   4
  ```   
 
-El archivo fuente del rompecabezas es un archivo de texto. La primera línea del archivo representa la altura y la anchura del rompecabezas, el resto de líneas son las piezas del mismo. La altura y la anchura así como cada forma del piezal están separadas por un espacio, es decir el archivo fuente de un rompezabezas de 4 por 4 debería tener este formato:
+El archivo fuente del rompecabezas es un archivo de texto. La primera línea del archivo representa la altura y la anchura del rompecabezas, el resto de líneas son las piezas del mismo. La altura y la anchura así como cada forma de la pieza están separadas por un espacio, es decir, el archivo fuente de un rompezabezas de 4 por 4 debería tener este formato:
 ```
 4 4
 1 1 3 2
@@ -40,6 +40,20 @@ El archivo solución usa los números de las piezas para representar el rompecab
 04 03 15 06
 ```
 
-Un rompecabezas puede tener más de una solución, no se consideran soluciones la rotación del mismo 90º o 180º o bien 270º.
+Un rompecabezas puede tener más de una solución, no se consideran soluciones la rotación del mismo 90º, 180º o 270º.
+
+Los archivos se generan dentro de la carpeta ./rec. El nombre del archivo fuente comenzará por «f_» y el del archivo solución por «s_», seguido por las dimensiones y una marca temporal, por ejemplo:
+```
+Nombre del archivo fuente:   f_5x5_20230226_212228.txt
+Nombre del archivo solución: s_5x5_20230226_212228.txt
+```
+
+## Uso
+```
+ python puzzle.py -d DIM [-h] [--version]
+``` 
+ Por ejemplo:
+ 
+  python puzzle.py -d 5
 
 
