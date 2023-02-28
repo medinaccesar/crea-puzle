@@ -35,8 +35,8 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser(
         description=conf.NOMBRE_AP+" "+str(conf.VERSION))
-    parser.add_argument("-d", "--dim", type=int,
-                        help=" Se crean los ficheros fuente y solución  del tamaño que se le pase, por ejemplo:  python puzzle.p -d 5 ")
+    parser.add_argument("-d", "--dim", type=int, required=True,
+                        help=" Dimensiones del rompecabezas a crear, por ejemplo:  python puzzle.py -d 5 ")
     parser.version = str(conf.VERSION)
     parser.add_argument('--version', action='version')
 
